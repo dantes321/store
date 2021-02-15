@@ -1,0 +1,28 @@
+
+.app-wrapper{
+
+    width: 1200px;
+    margin: 0 auto;
+    border-radius: 11px;
+    background-color: #292828;
+    min-height: 500px;
+
+
+}
+
+@media (max-width: 1200px) {
+    .app-wrapper{
+        max-width: 970px;
+    }
+}
+@media (max-width: 970px) {
+    .app-wrapper{
+        max-width: 750px;
+    }
+}
+@media (max-width: 750px) {
+    .app-wrapper{
+        max-width: none;
+
+    }
+}
