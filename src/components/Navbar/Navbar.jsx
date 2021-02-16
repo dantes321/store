@@ -9,7 +9,7 @@ const Navbar = (props) => {
             <ul>
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/cart">Cart</NavLink></li>
+                <li><NavLink to="/cart">Cart (0)</NavLink></li>
             </ul>
         </div>
     )

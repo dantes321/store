@@ -12,7 +12,7 @@ export let rerenderEntireTree = () => {
 
     ReactDOM.render(
 
-        <App  />,
+        <App  store={store}/>,
 
         document.getElementById('root')
     )
