@@ -9,7 +9,7 @@ const Navbar = (props) => {
             <ul>
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/cart">Cart (0)</NavLink></li>
+                <li><NavLink to="/cart">Cart ({props.store.CartItems.length})</NavLink></li>
             </ul>
         </div>
     )

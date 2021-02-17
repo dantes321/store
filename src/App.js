@@ -18,7 +18,7 @@ const App = (props) => {
 
                     <div className='app-wrapper-content'>
                         <Route exact path='/' render={() => <Store store ={props.store}/>} />
-                        <Route path='/cart' render={() => <Cart />} />
+                        <Route path='/cart' render={() => <Cart store ={props.store} />} />
                         <Route path='/about' render={() => <About />} />
                     </div>
 

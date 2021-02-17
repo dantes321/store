@@ -1,15 +1,18 @@
 *{
 
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 
 }
 .app-wrapper{
 
-    width: 1200px;
+    max-width: 1200px;
     margin: 10px  auto;
-
+    padding: 0 15px;
 
     min-height: 500px;
+    overflow: hidden;
 
 
 
@@ -27,7 +30,7 @@
 }
 @media (max-width: 750px) {
     .app-wrapper{
-        max-width: none;
+        max-width: 300px;
 
     }
 }
