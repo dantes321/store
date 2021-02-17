@@ -15,7 +15,7 @@ const StoreItem = (props) => {
 
 
                 <div className={s.item}>
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{  width: '18rem' ,margin: '0 auto' }}>
                         <Card.Img variant="top" src={props.src} />
                         <Card.Body>
                             <Card.Title>{props.name}</Card.Title>

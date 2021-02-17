@@ -30,7 +30,7 @@
 }
 @media (max-width: 750px) {
     .app-wrapper{
-        max-width: 300px;
+        max-width: none;
 
     }
 }
