@@ -8,7 +8,12 @@ const Store = (props) => {
         id={el.id}
         name = {el.name}
         price={el.price}
-        src={el.src}/>)
+        src={el.src}
+        counter={el.counter}
+        CartItems = {props.store.CartItems}
+        StoreItem = {props.store.StoreItems}
+        dispatch = {props.store.dispatch}/>)
+
 
     return (
 

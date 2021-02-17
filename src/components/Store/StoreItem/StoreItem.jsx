@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './StoreItem.module.css'
 import {Card,Button} from 'react-bootstrap'
+import {rerenderEntireTree} from "../../../index";
 
 const StoreItem = (props) => {
+
+
+    let addToCart = () => {
+        props.dispatch({type:'ADD-TO-CART'})
+
+    }
+
     return (
 
 
@@ -14,7 +22,7 @@ const StoreItem = (props) => {
                             <Card.Text>
                                 {props.price} $
                             </Card.Text>
-                            <Button  variant="primary">Add to cart</Button>
+                            <Button onClick={addToCart}  variant="primary">Add to cart</Button>
                         </Card.Body>
                     </Card>
 
