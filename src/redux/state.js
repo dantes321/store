@@ -61,22 +61,25 @@ let store = {
                 counter: this.counter
 
             }
+            let isNotContains = false
             if (this.CartItems.length === 0) {
                 this.CartItems.unshift(newCartItem)
+                isNotContains = true
+            } else {
+                this.CartItems.forEach(cartItem => {
+
+                    if (cartItem.id === newCartItem.id) {
+                        cartItem.counter += 1
+                        isNotContains = true
+                    }
+
+
+                })
             }
-            this.CartItems.forEach(cartItem => {
-
-                if (cartItem.id !== newCartItem.id) {
-                    this.CartItems.unshift(newCartItem)
-                    cartItem.counter += 1
-                } else if (cartItem.id === newCartItem.id) {
-                    cartItem.counter += 1
-                }
-
-
-            })
-
-            console.log(this.CartItems.length)
+            if(!isNotContains){
+                this.CartItems.push(newCartItem)
+            }
+            console.log(this.CartItems)
 
             rerenderEntireTree()
         }
