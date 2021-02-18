@@ -18,3 +18,14 @@ li img{
 li div{
     margin-right: 20px;
 }
+
+@media (max-width: 500px){
+    ol li{
+        display: block;
+        width: 100%;
+
+    }
+    .item{
+        margin: 0 auto;
+    }
+}

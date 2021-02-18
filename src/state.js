@@ -52,6 +52,7 @@ let store = {
         }
 
         else if(action.type==='ADD-TO-CART'){
+
             let newCartItem = {
 
                 id: this.id,
@@ -61,17 +62,23 @@ let store = {
                 counter: this.counter
 
             }
-            this.CartItems.forEach(el => {
-                if (el.id === newCartItem.id) {
+            if(this.CartItems.length === 0){
+                this.CartItems.unshift(newCartItem)
+            }
+            this.CartItems.forEach(cartItem => {
 
-                    newCartItem.counter += 1
-
-
+                if(cartItem.id !== newCartItem.id ){
+                    this.CartItems.unshift(newCartItem)
+                    cartItem.counter +=1
                 }
-            })
-            this.CartItems.unshift(newCartItem)
-            console.log(this.CartItems)
+                else if (cartItem.id === newCartItem.id){
+                    cartItem.counter +=1
+                }
 
+
+            })
+
+            console.log(this.CartItems.length)
 
             rerenderEntireTree()
         }
