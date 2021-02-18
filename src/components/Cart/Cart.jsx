@@ -1,14 +1,17 @@
 import React from 'react';
 import s from './Cart.module.css'
 import CartItem from "./CartItem/CartItem";
+import {checkOutActionCreator, clearCartActionCreator} from "../../redux/state";
+
+
 
 const Cart = (props) => {
 
     let clearCart = () => {
-        props.store.dispatch({type: 'CLEAR-CART'})
+        props.store.dispatch(clearCartActionCreator())
     }
     let checkOut = () => {
-        props.store.dispatch({type: 'CHECK-OUT'})
+        props.store.dispatch(checkOutActionCreator())
     }
 
     let newCartItem = props.store.CartItems.map(el => <CartItem

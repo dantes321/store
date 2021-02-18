@@ -2,12 +2,15 @@ import React, {useState} from 'react';
 import s from './StoreItem.module.css'
 import {Card,Button} from 'react-bootstrap'
 import {rerenderEntireTree} from "../../../index";
+import {addToCartActionCreator} from "../../../redux/state";
+
+
 
 const StoreItem = (props) => {
 
 
     let addToCart = () => {
-        props.dispatch({type:'ADD-TO-CART'})
+        props.dispatch(addToCartActionCreator())
 
     }
 

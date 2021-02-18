@@ -1,4 +1,8 @@
-import {rerenderEntireTree} from "./index";
+import {rerenderEntireTree} from "../index";
+
+const CHECK_OUT = 'CHECK-OUT';
+const CLEAR_CART = 'CLEAR-CART';
+const ADD_TO_CART = 'ADD-TO-CART';
 
 let store = {
     StoreItems: [
@@ -33,25 +37,20 @@ let store = {
 
     ],
     CartItems: [],
-    dispatch(action){
-        if(action.type === 'CLEAR-CART'){
-            let newPrompt = prompt('Are you sure you want to clear the Cart? (y/n)','')
-            if (newPrompt === 'y'){
+    dispatch(action) {
+        if (action.type === CLEAR_CART) {
+            let newPrompt = prompt('Are you sure you want to clear the Cart? (y/n)', '')
+            if (newPrompt === 'y') {
                 this.CartItems = []
                 rerenderEntireTree()
-            }
-            else {
+            } else {
                 alert('Try again!')
             }
-        }
-
-        else if (action.type === 'CHECK-OUT'){
+        } else if (action.type === CHECK_OUT) {
             alert(`You have bought ${this.CartItems.length} items!`)
             this.CartItems = []
             rerenderEntireTree()
-        }
-
-        else if(action.type==='ADD-TO-CART'){
+        } else if (action.type === ADD_TO_CART) {
 
             let newCartItem = {
 
@@ -62,17 +61,16 @@ let store = {
                 counter: this.counter
 
             }
-            if(this.CartItems.length === 0){
+            if (this.CartItems.length === 0) {
                 this.CartItems.unshift(newCartItem)
             }
             this.CartItems.forEach(cartItem => {
 
-                if(cartItem.id !== newCartItem.id ){
+                if (cartItem.id !== newCartItem.id) {
                     this.CartItems.unshift(newCartItem)
-                    cartItem.counter +=1
-                }
-                else if (cartItem.id === newCartItem.id){
-                    cartItem.counter +=1
+                    cartItem.counter += 1
+                } else if (cartItem.id === newCartItem.id) {
+                    cartItem.counter += 1
                 }
 
 
@@ -87,6 +85,24 @@ let store = {
 
 }
 
+export const clearCartActionCreator = () => {
+
+    return {
+        type: CLEAR_CART
+    }
+}
+export const checkOutActionCreator = () => {
+
+    return {
+        type: CHECK_OUT
+    }
+}
+export const addToCartActionCreator = () => {
+
+    return {
+        type: ADD_TO_CART
+    }
+}
 
 export default store;
 window.store = store;
