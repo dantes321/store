@@ -7,6 +7,7 @@ const Header = (props) =>{
         <div className={s.header}>
             <div className={s.headerInner}>
                 <img className={s.logo} src='https://lh3.googleusercontent.com/9O8nwC6O5B78Nkm-uC2WzL113Mm3bCiH4b5TlbFxVU_k8rJa_8oD3zzXpLcP9tYX1_TV0w=s85  ' />
+
                 <div className={s.navbar}>
                     <ul>
                         <li><NavLink activeClassName={s.active} to="/profile">Profile</NavLink></li>

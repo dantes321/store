@@ -88,3 +88,7 @@ ul li a:hover,.active{
         transform: rotate(360deg);
     }
 }
+
+.headerBurger{
+    display: none;
+}

@@ -16,7 +16,7 @@ const Profile = (props) => {
 
             <div className={s.myPosts}>My Posts
 
-                <MyPosts PostsItems={props.state.PostsItems}/>
+                <MyPosts dispatch ={props.dispatch} PostsItems={props.state.PostsItems}/>
 
 
             </div>
