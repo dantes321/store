@@ -9,7 +9,7 @@ export let rerenderEntireTree = () => {
 
     ReactDOM.render(
 
-        <App state ={store._state}/>,
+        <App addPost = {store.addPost} state ={store._state}/>,
 
         document.getElementById('root')
     )

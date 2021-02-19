@@ -2,10 +2,13 @@
 let store = {
     _state:{
         PostsItems: [
-            {text: 'Hello, my friend!' },
-            {text: 'My name is Pudge!' },
-            {text: 'Yeahhhhhhhhhhhhhhhhhhhh!' },
+            {id:1,text: 'Hello, my friend!' },
+            {id:2,text: 'My name is Pudge!' },
+            {id:3,text: 'Yeahhhhhhhhhhhhhhhhhhhh!' },
         ]
+
+    },
+    addPost(){
 
     }
 }
