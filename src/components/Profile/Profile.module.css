@@ -1,0 +1,28 @@
+.profile {
+    background: #d9edeb;
+    width: 100%;
+    margin-top:90px;
+    font-size: 18px;
+
+
+
+}
+.profileInfo{
+    text-align: center;
+    padding-top: 10px;
+}
+.description{
+    margin-top: 10px;
+}
+
+
+.myPosts{
+    font-weight: 700;
+    font-size: 33px;
+    padding: .8em 3em;
+
+
+}
+button{
+
+}

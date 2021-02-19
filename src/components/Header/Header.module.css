@@ -1,0 +1,90 @@
+.header{
+    width: 100%;
+    background: #80bdff;
+    grid-area: h;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+}
+.headerInner{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 40px;
+    font-size: 18px;
+}
+.logo{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: rotating 2s infinite;
+
+}
+
+.siteDesc{
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-family: "Adobe Caslon Pro";
+    padding: 5px;
+    animation: desc 2s  ;
+
+}
+.navbar{
+
+
+    opacity: 80%;
+
+
+}
+ul{
+    display: inline-flex;
+}
+ul li{
+    list-style: none;
+    margin: 0 20px;
+    transition: .3s;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    padding: 5px 8px;
+    transition: .3s ;
+}
+ul li a:hover,.active{
+    border: 1px solid white;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+@keyframes desc {
+    0%{
+        transform: translateY(-100px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
