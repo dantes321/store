@@ -1,16 +1,20 @@
 import React from "react";
 import s from './MyPosts.module.css'
 import MyPost from "./MyPost/MyPost";
-import {addPostActionCreator} from "../../../redux/state";
+import {addPostActionCreator, updateNewPostTextAC} from "../../../redux/profile-reducer";
+
 
 const MyPosts = (props) => {
-    let newPostItems = props.PostsItems.map(el => <MyPost text ={el.text}/>)
-    let newPostItem = React.createRef()
+    let newPostItems = props.profilePage.PostsItems.map(el => <MyPost text ={el.text}/>)
+
 
     let addPost = () =>{
-        let newText = newPostItem.current.value
-        props.dispatch(addPostActionCreator(newText))
-        newPostItem.current.value = ''
+
+        props.dispatch(addPostActionCreator())
+    }
+    let updateNewPostText = (text) =>{
+        let newText = text.target.value;
+        props.dispatch(updateNewPostTextAC(newText))
     }
 
 
@@ -19,7 +23,13 @@ const MyPosts = (props) => {
         <div className={s.myPosts}>
 
             <div className={s.addPost}>
-                <div><textarea ref={newPostItem} placeholder='Add new post..'></textarea></div>
+                <div>
+                    <textarea
+                    placeholder='Add new post..'
+                    value={props.profilePage.PostItemText}
+                    onChange={updateNewPostText}
+                    />
+                </div>
                 <button onClick={addPost} className='btn btn-success'>Add post</button>
             </div>
 

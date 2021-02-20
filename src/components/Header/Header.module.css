@@ -18,10 +18,11 @@
     font-size: 18px;
 }
 .logo{
+    background-color: red;
     border-radius: 50%;
     width: 80px;
     height: 80px;
-    animation: rotating 2s infinite;
+
 
 }
 
@@ -35,7 +36,6 @@
 
 }
 .navbar{
-
 
     opacity: 80%;
 
@@ -79,16 +79,37 @@ ul li a:hover,.active{
     }
 
 }
-@keyframes rotating {
-    from{
-        transform: rotate(0deg);
 
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
 
 .headerBurger{
-    display: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    cursor: pointer;
 }
+.headerBurger:before,
+.headerBurger:after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+}
+.headerBurger:after{
+    top: 20px;
+}
+.headerBurger span{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background-color: white;
+    top: 10px;
+}
+

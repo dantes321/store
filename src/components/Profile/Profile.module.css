@@ -1,11 +1,7 @@
-.profile {
-    background: #d9edeb;
-    width: 100%;
-    margin-top:90px;
-    font-size: 18px;
-
-
-
+.profileImg{
+    width: 200px;
+    height: 300px;
+    border-radius: 0;
 }
 .profileInfo{
     text-align: center;
