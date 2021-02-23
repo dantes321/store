@@ -6,38 +6,19 @@
 
 }
 .app-wrapper{
-    width: 100%;
+    display: grid;
+    grid-template-areas: 'h h '
+                         'n p';
+    max-width: 1300px;
+    margin: 0 auto;
+    grid-template-columns: 2fr 9fr;
+
+
 }
 .app-wrapper-content{
 
-    max-width: 1300px;
-    margin: 90px auto;
-    padding: 10px 15px;
-
-    min-height: 500px;
-    overflow: hidden;
-
-    background: #d9edeb;
-    width: 100%;
-
-    font-size: 18px;
-
-
+    grid-area: p;
+    background-color: #0c5460;
+    padding: 15px 45px;
 }
 
-@media (max-width: 1300px) {
-    .app-wrapper-content{
-        max-width: 1070px;
-    }
-}
-@media (max-width: 970px) {
-    .app-wrapper-content{
-        max-width: 850px;
-    }
-}
-@media (max-width: 750px) {
-    .app-wrapper-content{
-        max-width: none;
-
-    }
-}

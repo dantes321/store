@@ -1,115 +1,41 @@
 .header{
-    width: 100%;
-    background: #80bdff;
     grid-area: h;
-    position: fixed;
-    top: 0;
-    left: 0;
-
-
-}
-.headerInner{
-    width: 100%;
-    display: inline-flex;
+    background-color: #062c33;
+    padding: 15px 45px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
-    padding: 0 40px;
-    font-size: 18px;
+
 }
 .logo{
-    background-color: red;
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+
+
+}
+.circle{
+    width: 50px;
+    height: 50px;
+
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
-
-
+    animation: colored 5s infinite;
 }
 
-.siteDesc{
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 25px;
-    font-family: "Adobe Caslon Pro";
-    padding: 5px;
-    animation: desc 2s  ;
-
-}
-.navbar{
-
-    opacity: 80%;
-
-
-}
-ul{
-    display: inline-flex;
-}
-ul li{
-    list-style: none;
-    margin: 0 20px;
-    transition: .3s;
-
-}
-
-ul li a{
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 20px;
-    border: 1px solid transparent;
-    padding: 5px 8px;
-    transition: .3s ;
-}
-ul li a:hover,.active{
-    border: 1px solid white;
-    text-decoration: none;
-    color: black;
-}
-
-
-
-@keyframes desc {
+@keyframes colored {
     0%{
-        transform: translateY(-100px);
-    }
+        transform: rotateX(0deg);
+        background: linear-gradient(90deg,rebeccapurple,blue);
 
+    }
+    50%{
+        transform: rotateZ(180deg);
+        background: linear-gradient(45deg,blue,red);
+    }
     100%{
-        transform: translateY(0px);
+        transform: rotateX(360deg);
+        background: linear-gradient(90deg,rebeccapurple,blue);
     }
-
 }
-
-
-.headerBurger{
-    display: block;
-    width: 40px;
-    height: 40px;
-
-    position: relative;
-    cursor: pointer;
-}
-.headerBurger:before,
-.headerBurger:after{
-    content: '';
-    height: 3px;
-    width: 100%;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-
-}
-.headerBurger:after{
-    top: 20px;
-}
-.headerBurger span{
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    left: 0;
-    background-color: white;
-    top: 10px;
-}
-

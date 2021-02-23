@@ -1,12 +1,15 @@
 .myPost img{
+    border-radius: 50%;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    margin: 15px 20px;
+    margin: 20px 20px 10px 0;
 }
-.myPost{
-    background: #c3eda9;
-    margin: 5px 0;
-    word-wrap: break-word;
-
+.myPost span{
+    font-size: 20px;
+    color: white;
+    word-break: break-word;
+}
+.myPost {
+    background:linear-gradient(90deg,darkslateblue,brown);
+    margin: 10px 0;
 }

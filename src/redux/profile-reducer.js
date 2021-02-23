@@ -1,40 +1,47 @@
-import {rerenderEntireTree} from "../index";
 const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_POST_ITEM = 'UPDATE-NEW-POST-ITEM'
 
-const profileReducer = (state,action) => {
-
-    switch (action.type) {
-        case ADD_POST:
-            if(state.PostItemText.length>0 && !state.PostItemText.startsWith(' '))
-                state.PostsItems.push({id: 5, text: state.PostItemText})
-                state.PostItemText = ''
-
-            return state;
-
-
-        case UPDATE_NEW_POST_TEXT:
-            state.PostItemText = action.text
-            return state;
-
-
-        default:
-            return state;
-    }
+let initialState = {
+    posts: [
+        {id: 1, text: 'Hello, World!'},
+        {id: 2, text: 'Hello, my friends!'},
+        {id: 3, text: 'Im here!'},
+    ],
+    newPostItem : '',
 }
 
-export const addPostActionCreator = () => {
+let profileReducer = (state = initialState, action) => {
 
-    return {
-        type: ADD_POST,
-    }
-}
-export const updateNewPostTextAC = (newText) =>{
-    return{
-        type: UPDATE_NEW_POST_TEXT,
-        text: newText,
+    switch (action.type){
+        case ADD_POST :
+            let newPost ={
+                id: 4,
+                text: state.newPostItem,
+            }
+            state.posts.push(newPost)
+            state.newPostItem = ''
+            return state;
+
+        case UPDATE_NEW_POST_ITEM:
+            state.newPostItem = action.newText
+            return state;
+
     }
 
+
+    return state;
 }
+
+export const addPostAC = () => (
+    {
+        type: ADD_POST
+    }
+)
+export const updateNewPostTextAC = (text) => (
+    {
+        type: UPDATE_NEW_POST_ITEM,
+        newText: text,
+    }
+)
 
 export default profileReducer;

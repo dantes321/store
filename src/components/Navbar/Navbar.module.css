@@ -1,0 +1,37 @@
+.navbar{
+    grid-area: n;
+    background-color: #1e7e34;
+    padding: 15px 45px;
+
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+}
+ul li {
+    margin-top: 20px;
+    border: 1px solid transparent;
+    transition: .3s;
+
+
+}
+ul li a {
+    padding: 6px 12px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+ul li  :hover{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+
+
+}
+.active{
+    border: 1px solid white;
+}
