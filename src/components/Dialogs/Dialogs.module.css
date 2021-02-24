@@ -4,3 +4,13 @@
     font-size: 20px;
     color: white;
 }
+textarea{
+    resize: none;
+    width: 300px;
+    padding: 10px;
+    font-size: 20px;
+
+    box-shadow: black 4px 4px 20px inset;
+    font-family: "Adobe Caslon Pro Bold";
+    transition: .5s;
+}

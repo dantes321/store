@@ -5,16 +5,16 @@ import {sendMessageAC, updateMessageTextAC} from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
 
-    let namesItems = props.store.getState().dialogsPage.names.map(el => <DialogItem name ={el.name} id ={el.id}/>)
-    let messagesItems = props.store.getState().dialogsPage.messages.map(el => <DialogItem name ={el.message}/>)
+    let namesItems = props.dialogsPage.names.map(el => <DialogItem key ={el.id} name ={el.name} id ={el.id}/>)
+    let messagesItems = props.dialogsPage.messages.map(el => <DialogItem key ={el.id} name ={el.message}/>)
 
     let sendMessage = () =>{
-        props.store.dispatch(sendMessageAC())
+        props.sendMessage()
     }
 
     let updateMessageText = (text) => {
         let newText = text.target.value
-        props.store.dispatch(updateMessageTextAC(newText))
+        props.updateMessageText(newText)
 
     }
 
@@ -31,7 +31,7 @@ const Dialogs = (props) => {
                     <div>
                         <textarea
                     placeholder='Enter a message ..'
-                    value={props.store.getState().dialogsPage.updateNewPostText}
+                    value={props.dialogsPage.updateMessageText}
                     onChange={updateMessageText}></textarea>
                     </div>
                     <button className='btn btn-dark' onClick={sendMessage}>Send message</button>

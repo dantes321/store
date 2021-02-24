@@ -5,7 +5,7 @@ import MyPost from "./MyPost/MyPost";
 
 const MyPosts = (props) =>{
 
-    let renderPostItems = props.posts.map(el => <MyPost text = {el.text}/>)
+    let renderPostItems = props.profilePage.posts.map(el => <MyPost key ={el.id} text = {el.text}/>)
 
     let addPost =() =>{
         props.addPost()
@@ -21,7 +21,7 @@ const MyPosts = (props) =>{
             <div>
                 <div><textarea
                     onChange={updateNewPostText}
-                    value={props.newPostItem}
+                    value={props.profilePage.newPostItem}
                     placeholder='Enter something..'> </textarea></div>
                 <button onClick={addPost} className='btn btn-success'>Add post</button>
                 {renderPostItems}
