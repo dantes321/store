@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import Users from "./Users";
-import {followAC, setCurrentPageAC, setUsersAC, unfollowAC} from "../../redux/users-reducer";
+import {followAC, setCurrentPageAC, setLoadingAC, setUsersAC, unfollowAC} from "../../redux/users-reducer";
 
 
 let mapStoreToProps = (state) =>{
@@ -10,6 +10,7 @@ let mapStoreToProps = (state) =>{
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
+        isLoaded: state.usersPage.isLoaded,
 
     }
 }
@@ -19,6 +20,7 @@ let mapDispatchToProps = (dispatch) =>{
         unfollow: (userId) => {dispatch(unfollowAC(userId))},
         setUsers: (users) => {dispatch(setUsersAC(users))},
         currentPage:(currentPage) => {dispatch(setCurrentPageAC(currentPage))},
+        loadingStatus: (loadStatus) => {dispatch(setLoadingAC(loadStatus))},
     }
 }
 

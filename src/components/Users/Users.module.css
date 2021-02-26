@@ -36,3 +36,7 @@ span{
     margin: 0 10px;
     cursor: pointer;
 }
+.loading{
+    width: 100px;
+    height: 150px;
+}
