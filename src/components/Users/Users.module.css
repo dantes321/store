@@ -1,5 +1,5 @@
 .users{
-
+    cursor: pointer;
 }
 .photo img{
     width: 100px;
@@ -25,4 +25,14 @@
 }
 .photo button{
     margin-top: 10px;
+}
+.active{
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: 1px solid red;
+}
+span{
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
 }

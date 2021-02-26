@@ -1,33 +1,14 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
+const SET_USERS = 'SET-USERS';
+const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
+const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 
 let initialState = {
-    users: [
-        {
-            id: 1,
-            photo: 'https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png',
-            name: 'Alex Petrov',
-            status: 'Im looking for a job',
-            location: {country: 'Belarus', city: 'Minsk'},
-            isFollowed: false
-        },
-        {
-            id: 2,
-            photo: 'https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png',
-            name: 'Dima Prima',
-            status: 'Im so pretty',
-            location: {country: 'Russia', city: 'Sochi'},
-            isFollowed: true
-        },
-        {
-            id: 3,
-            photo: 'https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png',
-            name: 'Vasya Galkin',
-            status: 'Dance wherever you want!',
-            location: {country: 'Ukraine', city: 'Kiev'},
-            isFollowed: false
-        },
-    ]
+    users: [],
+    pageSize: 7,
+    totalUsersCount: 30,
+    currentPage: 1,
 }
 
 let usersReducer = (state = initialState, action) => {
@@ -39,7 +20,7 @@ let usersReducer = (state = initialState, action) => {
                     if (u.id === action.userId) {
                         return {...u, isFollowed: true}
                     }
-                    console.log(u.isFollowed)
+
                     return u;
                 })
 
@@ -51,15 +32,31 @@ let usersReducer = (state = initialState, action) => {
                     if (u.id === action.userId) {
                         return {...u, isFollowed: false}
                     }
-                    console.log(u.isFollowed)
+
                     return u;
                 })
             }
+        case SET_USERS:
+            return {
+                ...state,
+                users: [...action.users],
+
+            }
+        case SET_CURRENT_PAGE:
+            return {
+                ...state,
+                currentPage: action.currentPage
+            }
+
+
     }
 
     return state;
 }
 export const followAC = (userId) => ({type: FOLLOW, userId})
 export const unfollowAC = (userId) => ({type: UNFOLLOW, userId})
+export const setUsersAC = (users) => ({type:SET_USERS,users})
+export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
+
 
 export default usersReducer;
