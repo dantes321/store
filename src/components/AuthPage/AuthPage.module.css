@@ -1,0 +1,113 @@
+.authPage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.imgBox{
+    width: 50%;
+    height: 100%;
+    background: red;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.contentBox{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imgBox:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(235deg,#a71d2a,#7abaff);
+    z-index: 2;
+    mix-blend-mode: screen;
+
+}
+
+/*Content box*/
+
+.contentBox .forms h2{
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-bottom: 4px solid brown;
+    display: inline-block;
+}
+.contentBox .forms .formBox span{
+    display: inline-flex;
+    margin-bottom: 5px;
+    color:#607db8;
+    font-size: 17px;
+    font-weight: 300;
+}
+.contentBox .forms input{
+    border-radius: 30px;
+    outline: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 1px solid #95999c;
+    width: 100%;
+    background: transparent;
+}
+.contentBox .forms input[type='submit']{
+    background: #a71d2a;
+    cursor: pointer;
+    font-weight: 400;
+    color: white;
+}
+
+.remember{
+    margin-bottom: 10px;
+    font-weight: 400;
+    width: 100%;
+
+}
+.contentBox .forms input[type='submit']:hover{
+    background: #491217;
+    box-shadow: #a71d2a 2px 2px 10px -2px;
+}
+@media (max-width: 786px) {
+    .imgBox {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .contentBox{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .contentBox .forms{
+        background: white;
+        opacity: 70%;
+        padding: 20px 40px;
+        margin: 0 5px;
+    }
+}

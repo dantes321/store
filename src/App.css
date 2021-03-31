@@ -1,56 +1,8 @@
-*{
+* {
 
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 
-}
 
-.app-wrapper{
-    display: grid;
-    grid-template-areas: 'h h '
-                         'n p';
-    max-width: 1300px;
-    margin: 0 auto;
-    grid-template-columns: 2fr 9fr;
-
-
-}
-.app-wrapper-content{
-
-    grid-area: p;
-    background-color: #0c5460;
-    padding: 15px 45px;
-}
-@media (max-width: 1600px) {
-    .app-wrapper{
-        max-width: 80%;
-    }
-}
-@media (max-width: 1300px) {
-    .app-wrapper{
-        max-width: 1140px;
-    }
-}
-@media (max-width: 1140px) {
-    .app-wrapper{
-        max-width: 992px;
-    }
-}
-@media (max-width: 992px) {
-    .app-wrapper{
-        max-width: 768px;
-    }
-}
-@media (max-width: 768px) {
-    .app-wrapper{
-        max-width: 576px;
-    }
-}@media screen and (max-width: 576px) {
-    .app-wrapper{
-        max-width: none;
-        margin: 0 auto;
-
-
-    }
 }
