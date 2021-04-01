@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './AuthPage.module.css'
 import {Redirect} from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 const AuthPage = (props) => {
     let loginText = React.createRef()
@@ -10,13 +11,16 @@ const AuthPage = (props) => {
         let login = loginText.current.value;
         let pass = passText.current.value;
         props.setUsers(login,pass)
-        console.log((props.authData.isAuth))
 
 
     }
 
-    if(props.authData.isAuth) return <Redirect to = './profile'/>
+    if(props.authData.isAuth) {
 
+        return <Redirect to='./profile'/>
+
+
+    }
     return (
 
         <div className={s.authPage}>

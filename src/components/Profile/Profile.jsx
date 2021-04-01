@@ -1,9 +1,15 @@
 import React from 'react';
 import s from './Profile.module.css'
-const Profile = () => {
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPosts from "./MyPosts/MyPosts";
+
+const Profile = (props) => {
     return (
         <div className={s.profile}>
-            <h1>You've successfully signed in!!</h1>
+            <div className={s.profileInner}>
+                <ProfileInfo/>
+                <MyPosts/>
+            </div>
         </div>
     );
 };

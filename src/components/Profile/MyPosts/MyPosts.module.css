@@ -1,0 +1,14 @@
+.posts{
+    padding: 20px;
+}
+.postsContainer{
+    display: flex;
+    flex-direction: column;
+
+}
+.postsContainer textarea{
+    width: 200px;
+}
+.postsContainer button{
+    width: 100px;
+}

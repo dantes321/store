@@ -14,7 +14,7 @@ const App = (props) => {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
-                <Navbar />
+
                 <Route path='/auth' render={() => <AuthPageContainer />}/>
                 <Route path='/profile' render={() => <Profile />}/>
                 <Route path='/friends' render={() => <Friends />}/>

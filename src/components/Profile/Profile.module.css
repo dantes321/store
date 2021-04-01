@@ -1,10 +1,14 @@
 .profile{
-    background: #a71d2a;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background: linear-gradient(235deg,#80bdff,#0c5460,#a71d2a);
+}
+.profileInner{
+    max-width: 1300px;
+    margin:  0 auto;
 }
 .profile h1{
     z-index: 1;
     color: white;
-    text-align: center;
+
 }
