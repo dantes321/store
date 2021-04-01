@@ -1,6 +1,8 @@
 import {combineReducers, createStore} from "redux";
+import authReducer from "./authReducer";
 
 let reducers = combineReducers({
+    authPage: authReducer,
 
 })
 

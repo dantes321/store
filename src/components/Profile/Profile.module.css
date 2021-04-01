@@ -1,0 +1,10 @@
+.profile{
+    background: #a71d2a;
+    width: 100%;
+    height: 100vh;
+}
+.profile h1{
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
