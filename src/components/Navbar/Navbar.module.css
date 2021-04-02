@@ -18,6 +18,7 @@
     width: 30px;
     height: 2px;
     transform: translateY(-5px);
+    transition: .3s;
 }
 .toggle:after{
     content: '';
@@ -26,15 +27,18 @@
     width: 30px;
     height: 2px;
     transform: translateY(5px);
+    transition: .3s;
 }
 .toggle.active:before{
     transform: translateY(0) rotate(45deg);
 }
 .toggle.active:after{
-    transform: translateY(0) rotate(45deg);
+    transform: translateY(0) rotate(-45deg);
 }
 /*Navbar*/
-
+.navbar.active{
+    left: 0;
+}
 .navbar{
     position: fixed;
     width: 300px;
@@ -42,7 +46,7 @@
     background: #0c5460;
     transition: .5s;
     top: 0;
-    left: 0;
+    left: -300px;
 }
 .navbar ul{
     position: relative;
