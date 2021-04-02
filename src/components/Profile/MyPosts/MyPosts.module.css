@@ -11,4 +11,18 @@
 }
 .postsContainer button{
     width: 100px;
+    margin: 10px 0;
+}
+.postsItems img{
+    width: 50px;
+    height: 50px;
+}
+.postsItems label{
+    font-size: 16px;
+    color: white;
+    margin-left: 20px;
+}
+.postsItem{
+    margin: 15px;
+
 }

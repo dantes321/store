@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
 
-    return (
+    return <div>
         <div className={s.navbar}>
             <ul>
                 <li><NavLink to='/auth'>Auth page</NavLink></li>
@@ -13,7 +13,11 @@ const Navbar = () => {
                 <li><NavLink to='/settings'>Settings</NavLink></li>
             </ul>
         </div>
-    );
+        <div  className={s.toggle}>
+
+        </div>
+    </div>
+
 };
 
 export default Navbar;
