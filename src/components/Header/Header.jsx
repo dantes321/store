@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from './Header.module.scss'
 
-const Header = () => {
+const Header = (props) => {
 
     const [active,isActive] = useState(false)
 
@@ -11,9 +11,9 @@ const Header = () => {
 
     return (
 
-        <div className={s.headerInner}>
+        <div className={active? `${s.headerInner} ${s.active}`: s.headerInner}>
             <div className={s.logo}></div>
-            <nav>
+            <nav className={active?`${s.nav} ${s.active}`:s.nav}>
                 <ul>
                     <li><a href="#">Всі бокси</a></li>
                     <li><a className={s.virus} href="#">Карантин</a></li>

@@ -3,6 +3,7 @@ import s from './Slider.module.scss'
 import {Carousel} from "react-bootstrap";
 
 const Slider = () => {
+
     return (
         <div className={s.slider}>
             <Carousel>

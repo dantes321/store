@@ -12,7 +12,6 @@ const App = (props) => {
 
     return (
         <BrowserRouter>
-
                 <Header />
                 <Slider />
                 <Description />

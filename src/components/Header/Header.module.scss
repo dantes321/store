@@ -1,5 +1,16 @@
 
 .headerInner {
+  &.active {
+    width: 100%;
+    height: 100vh;
+    background: #0f6674;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+  }
+
   max-width: 1300px;
   margin: 0 auto;
   min-height: 100px;
@@ -11,6 +22,7 @@
   right: 0;
   top: 0;
   z-index: 2;
+  overflow: hidden;
 
   .toggle {
     width: 60px;
@@ -23,7 +35,7 @@
     align-items: center;
     justify-content: center;
     visibility: hidden;
-    border-radius: 50%  ;
+    border-radius: 50%;
 
     &:after {
       content: '';
@@ -92,7 +104,36 @@
     flex-shrink: 0;
   }
 
-  nav {
+  .nav {
+    &.active {
+      display: block;
+      margin: 0;
+
+      ul {
+        text-align: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 230px;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          a {
+            color: white;
+            font-size: 34px;
+          }
+        }
+      }
+    }
+
     ul {
       margin-top: 10px;
 
@@ -131,12 +172,14 @@
 
 @media (max-width: 810px) {
   .headerInner {
-    nav{
+    .nav {
       display: none;
     }
-    .createBox{
+
+    .createBox {
       display: none;
     }
+
     .toggle {
       visibility: visible;
     }
