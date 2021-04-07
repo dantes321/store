@@ -1,12 +1,10 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route,BrowserRouter} from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import AuthPageContainer from "./components/AuthPage/AuthPageContainer";
-import Profile from "./components/Profile/Profile";
-import Friends from "./components/Friends/Friends";
-
+import Header from "./components/Header/Header";
+import Slider from "./components/Slider/Slider";
+import Description from "./components/Description/Description";
 
 
 
@@ -14,14 +12,10 @@ const App = (props) => {
 
     return (
         <BrowserRouter>
-            <div className='app-wrapper'>
-                <Route path = '/navbar' render={() => <Navbar />}/>
-                <Route path='/auth' render={() => <AuthPageContainer />}/>
-                <Route path='/profile' render={() => <Profile />}/>
-                <Route path='/friends' render={() => <Friends />}/>
 
-
-            </div>
+                <Header />
+                <Slider />
+                <Description />
         </BrowserRouter>
     )
 }

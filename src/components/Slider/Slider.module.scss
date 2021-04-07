@@ -1,0 +1,32 @@
+
+.slider {
+  width: 100vw;
+  min-height: 40%;
+  margin-top: 100px;
+  .addGift {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 18px 30px;
+    background: #e43a45;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    border-color: transparent;
+    transition: .4s;
+
+    &:hover {
+      background: white;
+      color: #e43a45;
+    }
+  }
+
+  .slide{
+    display: block;
+    width: 100%;
+    background: 50%/cover no-repeat;
+    height: 450px;
+    filter: blur(5px);
+  }
+}

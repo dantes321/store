@@ -1,0 +1,144 @@
+
+.headerInner {
+  max-width: 1300px;
+  margin: 0 auto;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+
+  .toggle {
+    width: 60px;
+    height: 60px;
+    background: rgba(145, 145, 145, 0.5);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    border-radius: 50%  ;
+
+    &:after {
+      content: '';
+      width: 45px;
+      height: 2px;
+      background: white;
+      position: absolute;
+      transform: translateY(6px);
+      transition: .4s;
+    }
+
+    &:before {
+      content: '';
+      width: 45px;
+      height: 2px;
+      background: white;
+      position: absolute;
+      transform: translateY(-6px);
+      transition: .4s;
+    }
+
+    &.active:after {
+      content: '';
+      width: 45px;
+      height: 2px;
+      background: white;
+      position: absolute;
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &.active:before {
+      content: '';
+      width: 45px;
+      height: 2px;
+      background: white;
+      position: absolute;
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+
+  .createBox {
+    padding: 10px 16px;
+    background: #e43a45;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    border-color: transparent;
+    transition: .4s;
+    flex-shrink: 0;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+
+
+  }
+
+  .logo {
+    background: url("https://thumb.tildacdn.com/tild6538-3066-4236-b639-383638326563/-/resize/65x/-/format/webp/Full_logo_white_RGB.png") no-repeat;
+    width: 120px;
+    height: 40px;
+    margin: 0 5px;
+    flex-shrink: 0;
+  }
+
+  nav {
+    ul {
+      margin-top: 10px;
+
+      li {
+        display: inline-flex;
+        margin: 0 20px;
+
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 17px;
+          font-weight: 700;
+          color: #35303f;
+          transition: .5s;
+          position: relative;
+
+          &.virus:after {
+            content: '';
+            background: url("https://thumb.tildacdn.com/tild6564-3061-4039-b035-326335383239/-/format/webp/Virus.png") 100%/cover no-repeat;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -10px;
+            right: -12px;
+
+          }
+
+          &:hover {
+            color: #c8144b;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .headerInner {
+    nav{
+      display: none;
+    }
+    .createBox{
+      display: none;
+    }
+    .toggle {
+      visibility: visible;
+    }
+  }
+}
