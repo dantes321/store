@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: space-around;
   margin: 20px 0;
+  position: relative;
+
   .text{
     width: 700px;
     font-size: 18px;
@@ -35,6 +37,15 @@
       height: 80px;
       border-radius: 50%;
     }
+  }
+  .decoration{
+    height: 40px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+
   }
 }
 @media (max-width: 778px) {

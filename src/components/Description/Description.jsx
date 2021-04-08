@@ -11,6 +11,7 @@ const Description = () => {
                 <div className={s.name}>Бурминова Вероніка</div>
                 <div className={s.work}>Засновник</div>
             </div>
+            <div className={s.decoration}></div>
         </div>
     );
 };

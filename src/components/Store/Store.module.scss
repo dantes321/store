@@ -1,0 +1,22 @@
+
+.store{
+  overflow: hidden;
+  margin-top: 70px;
+  .description{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    .subtitle{
+      margin: 25px 0 ;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .title{
+      font-size: 35px;
+      font-weight: 600;
+
+    }
+  }
+}
