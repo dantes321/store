@@ -7,6 +7,7 @@ import Slider from "./components/Slider/Slider";
 import Description from "./components/Description/Description";
 import Store from "./components/Store/Store";
 import CreateBox from "./components/CreateBox/CreateBox";
+import Conditions from "./components/Conditions/Conditions";
 
 
 
@@ -20,6 +21,7 @@ const App = (props) => {
                 <Description />
                 <Store />
                 <CreateBox />
+                <Conditions />
             </div>
         </BrowserRouter>
     )
