@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Slider.module.scss'
 import {Carousel} from "react-bootstrap";
+import {NavLink} from "react-router-dom";
 
 const Slider = () => {
 
@@ -11,25 +12,28 @@ const Slider = () => {
 
                     <img
                         className={s.slide}
-                        src="https://img2.goodfon.ru/wallpaper/nbig/7/d7/christmas-winter-new-year-gifts-bow-novyi-god-elka-podarki-b.jpg"
+                        src="https://www.restoclub.ru/uploads/article_thumbnail_big/f/6/9/7/f697a9c2a94c3567fc5fc05702c02ff2.jpg"
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <a className={s.addGift} href="#">Обрати подарунки</a>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <div className={s.body}>
+                        <div className={s.title}>Корпоративні подарунки</div>
+                        <NavLink className={s.addGift} to="/createbox">Обрати подарунки</NavLink>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
                     <img
                         className={s.slide}
-                        src="https://zub-zdorov.com.ua/image/willDoHappy/birthday.jpg"
+                        src="https://biz.liga.net/images/general/2020/11/10/thumbnail-tw-20201110104735-8369.jpg?v=1605001781"
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <a className={s.addGift} href="#">Обрати подарунки</a>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <div className={s.body}>
+                            <div className={s.title}>Карантин</div>
+                            <div className={s.subtitle}>Підбадьорь близьких</div>
+                            <NavLink className={s.addGift} to="/createbox">Обрати подарунки</NavLink>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
@@ -39,9 +43,24 @@ const Slider = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <a className={s.addGift} href="#">Обрати подарунки</a>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <div className={s.body}>
+                            <div className={s.title}>Конструктор Подарунків</div>
+                            <div className={s.subtitle}>Створи свій бокс з наявних інгредієнтів</div>
+                            <NavLink className={s.addGift} to="/createbox">Створити свій бокс</NavLink>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={4000}>
+                    <img
+                        className={s.slide}
+                        src="https://rusradio.lt/wp-content/uploads/2020/12/960x540.jpg"
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <div className={s.body}>
+                            <div className={s.title}>Супергеройські бокси</div>
+                            <NavLink className={s.addGift} to="#">Обрати супергероя</NavLink>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
 

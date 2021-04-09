@@ -104,6 +104,7 @@
     height: 40px;
     margin: 0 5px;
     flex-shrink: 0;
+    cursor: pointer;
   }
 
   .nav {
@@ -176,7 +177,7 @@
   .headerInner {
     .nav {
       display: none;
-      overflow: hidden;
+
     }
 
     .createBox {

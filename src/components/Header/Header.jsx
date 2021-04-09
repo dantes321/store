@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import s from './Header.module.scss'
+import {NavLink} from "react-router-dom";
 
 const Header = (props) => {
 
@@ -12,7 +13,9 @@ const Header = (props) => {
     return (
 
         <div className={active? `${s.headerInner} ${s.active}`: s.headerInner}>
-            <div className={s.logo}></div>
+           <NavLink className = {s.logo} to="/home">
+
+           </NavLink>
             <nav className={active?`${s.nav} ${s.active}`:s.nav}>
                 <ul>
                     <li><a href="#">Всі бокси</a></li>
@@ -24,7 +27,7 @@ const Header = (props) => {
                 </ul>
             </nav>
             <div onClick={toggleClass} className={active? `${s.toggle} ${s.active}`: s.toggle}></div>
-            <a className={s.createBox} href="#">Створи свій бокс</a>
+            <NavLink className={s.createBox} to ='/createbox'>Створи свій бокс</NavLink>
         </div>
     );
 };

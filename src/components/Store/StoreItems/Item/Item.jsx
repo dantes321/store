@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './Item.module.scss';
 
 const Item = ({img,title,description,price}) => {
