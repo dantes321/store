@@ -1,5 +1,110 @@
 .CreateOwnBox{
+  .constructor{
+    .title{
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .subtitle{
+      font-weight: 700;
+      font-size: 35px;
+      margin-bottom: 60px;
+    }
+  }
+
+  text-align: center;
+
+  .instruction{
+    .decoration{
+      height: 45px;
+      width: 1px;
+      background: black;
+      margin: 40px auto;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      padding: 15px 30px;
+      background: black;
+      text-align: center;
+      display: inline-block;
+      border-radius: 25px;
+      margin: 40px 0 70px 0;
+      transition: .5s ease;
+      &:hover{
+        background: #e43a45;;
+      }
+    }
+    .blocks{
+      width: 600px;
+      margin: 0 auto 30px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+
+
+      span{
+        font-size: 25px;
+        color: white;
+        background: #1b1e21;
+        border-radius: 100%;
+        padding: 2px 12px;
+        width: 80px;
+        height: 80px;
+
+
+
+      }
+
+
+      .leftBlock{
+        width: 50%;
+        border-right: 3px solid black;
+        span:nth-child(odd){
+          margin-left: 280px;
+
+        }
+
+      }
+      .leftBlock:nth-child(odd){
+        padding-right: 70px;
+      };
+
+
+      .rightBlock{
+        width: 50%;
+        span:nth-child(odd){
+          margin-left: -370px;
+
+        }
+      }
+      .rightBlock:nth-child(even){
+        margin-top: 140px;
+        padding-left: 70px;
+      };
+
+    }
+    width: 100%;
+    .titleBlock{
+      font-size: 22px;
+      font-weight: 700;
+
+    }
+    .subtitleBlock{
+      font-weight: 400;
+      font-size: 16px;
+      max-width: 300px;
+    }
+    .title{
+      margin: 80px 30px 80px 0;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+    }
+  }
+
   .topBox {
+
     width: 100%;
     height: 400px;
     background: url("https://hdoboi.kiev.ua/images/middle/02.Dec.2019-novogodnie-podarki.jpg") 50%/cover no-repeat;
@@ -63,6 +168,7 @@
     }
   }
   .description{
+
     margin: 0 auto;
     width: 100%;
     display: flex;
@@ -108,6 +214,11 @@
 }
 @media (max-width: 707px) {
   .CreateOwnBox {
+
+    .founder{
+      width: 100%;
+      padding-left: 40px;
+    }
     .description {
       flex-direction: column;
 
@@ -136,6 +247,10 @@
 }
 @media (max-width: 360px) {
   .CreateOwnBox {
+    .founder{
+      width: 100%;
+      padding-left: 40px;
+    }
     .topBox {
       height: 300px;
 
