@@ -35,6 +35,7 @@
         background: #e43a45;;
       }
     }
+    //blocks.............................................
     .blocks{
       width: 600px;
       margin: 0 auto 30px;
@@ -52,10 +53,7 @@
         width: 80px;
         height: 80px;
 
-
-
       }
-
 
       .leftBlock{
         width: 50%;
@@ -102,7 +100,7 @@
       font-weight: 600;
     }
   }
-
+  //blocks.............................................
   .topBox {
 
     width: 100%;
@@ -268,6 +266,142 @@
       }
     }
   }
+}
+@media (max-width: 710px) {
+  .CreateOwnBox{
+    .instruction{
+      .blocks{
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: none;
+
+        .titleBlock{
+          font-size: 22px;
+          font-weight: 700;
+          text-align: left;
+          border: none;
+
+        }
+        .subtitleBlock{
+          font-weight: 400;
+          font-size: 16px;
+          max-width: 300px;
+          text-align: left;
+        }
+        span{
+          display: none;
+          border: none;
+
+        }
+
+        .leftBlock{
+          width: 100%;
+          border:none;
+          padding: 30px 80px;
+          span:nth-child(odd){
+            margin-left: 0;
+
+          }
+
+        }
+        .leftBlock:nth-child(odd){
+          padding-right: 0;
+
+        }
+        .rightBlock{
+          width:100%;
+          padding: 30px 0;
+          border: none;
+          span:nth-child(odd){
+            margin-left: 0;
+
+          }
+        }
+        .rightBlock:nth-child(even){
+          margin-top: 0;
+          padding-left: 80px;
+
+        }
+    }
+  }
+
+
+  }
+  .title{
+    margin: 80px 30px 80px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    border: none;
+  }
+}
+@media (max-width: 450px) {
+  .CreateOwnBox{
+    .instruction{
+      .blocks{
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: none;
+
+        .titleBlock{
+          font-size: 22px;
+          font-weight: 700;
+          text-align: left;
+          border: none;
+
+        }
+        .subtitleBlock{
+          font-weight: 400;
+          font-size: 16px;
+          max-width: 300px;
+          text-align: left;
+        }
+        span{
+          display: none;
+          border: none;
+
+        }
+
+        .leftBlock{
+          width: 100%;
+          border:none;
+          padding: 3px 20px;
+          span:nth-child(odd){
+            margin-left: 0;
+
+          }
+
+        }
+        .leftBlock:nth-child(odd){
+          padding-right: 0;
+
+        }
+        .rightBlock{
+          width:100%;
+          padding: 30px 0;
+          border: none;
+          span:nth-child(odd){
+            margin-left: 0;
+
+          }
+        }
+        .rightBlock:nth-child(even){
+          margin-top: 0;
+          padding-left: 20px;
+
+        }
+      }
+    }
+
+
+  }
+
 }
 @keyframes arrow {
   0%{

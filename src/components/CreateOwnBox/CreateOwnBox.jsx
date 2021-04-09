@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './CreateOwnBox.module.scss';
+import ConstructorBox from "../ConstructorBox/Constructor";
 
 const CreateOwnBox = (props) => {
     return (
@@ -70,6 +71,7 @@ const CreateOwnBox = (props) => {
             <div className={s.constructor}>
                 <div className={s.title}>[ розпочнемо ]</div>
                 <div className={s.subtitle}>Обери коробку</div>
+                <ConstructorBox />
             </div>
 
         </div>
