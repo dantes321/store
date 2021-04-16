@@ -1,33 +1,28 @@
-import React, {useState} from 'react';
-import s from './Header.module.scss'
-import {NavLink} from "react-router-dom";
+import React from 'react';
+import s from './Header.module.scss';
 
-const Header = (props) => {
-
-    const [active,isActive] = useState(false)
-
-    let toggleClass = () =>{
-        isActive(!active)
-    }
-
+const Header = () => {
     return (
-
-        <div className={active? `${s.headerInner} ${s.active}`: s.headerInner}>
-           <NavLink className = {s.logo} to="/home">
-
-           </NavLink>
-            <nav className={active?`${s.nav} ${s.active}`:s.nav}>
-                <ul>
-                    <li><a href="#">Всі бокси</a></li>
-                    <li><a className={s.virus} href="#">Карантин</a></li>
-                    <li><a href="#">Доставка і оплата</a></li>
-                    <li><a href="#">Контакти</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Корпоративним клієнтам</a></li>
-                </ul>
-            </nav>
-            <div onClick={toggleClass} className={active? `${s.toggle} ${s.active}`: s.toggle}></div>
-            <NavLink className={s.createBox} to ='/createbox'>Створи свій бокс</NavLink>
+        <div className={s.header}>
+            <div className={s.headerContainer}>
+                <div className={s.headerLeft}>
+                    <div className={s.headerLogo}>
+                        <img src="https://static.tildacdn.com/tild3134-3063-4434-a164-643637656562/logo_2.png" alt=""/>
+                    </div>
+                    <div className={s.headerTitle}>СЮРПРИЗ-БОКСЫ №1 В УКРАИНЕ</div>
+                </div>
+                <div className={s.headerRight}>
+                    <div className={s.numbers}>
+                        <div>095-712-331-5</div>
+                        <div>096-712-331-5</div>
+                    </div>
+                    <div className={s.delivery}>
+                        <div>Доставка 1-3 дня.</div>
+                        <div>Нова-Пошта</div>
+                    </div>
+                    <a href="#">Сотрудничество</a>
+                </div>
+            </div>
         </div>
     );
 };

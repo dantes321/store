@@ -1,33 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Route,BrowserRouter} from "react-router-dom";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import Header from "./components/Header/Header";
-import Slider from "./components/Slider/Slider";
-import Description from "./components/Description/Description";
+import NewBox from "./components/NewBox/NewBox";
+import Navbar from "./components/Navbar/Navbar";
 import Store from "./components/Store/Store";
-import CreateBox from "./components/CreateBox/CreateBox";
-import Conditions from "./components/Conditions/Conditions";
-import Footer from "./components/Footer/Footer";
-import CreateOwnBox from "./components/CreateOwnBox/CreateOwnBox";
-
-
+import StoreContainer from "./components/Store/StoreContainer";
 
 const App = (props) => {
 
     return (
-        <BrowserRouter>
+       <div className='app-wrapper'>
+
             <Header />
-            <div className='app-wrapper'>
-                <Route path='/home' render={() => <Slider /> }/>
-                <Route path='/home' render={() => <Description /> }/>
-                <Route path='/home' render={() => <Store /> }/>
-                <Route path='/home' render={() => <CreateBox />}/>
-                <Route path='/home' render={() => <Conditions />}/>
-                <Route path='/home' render={() => <Footer />}/>
-                <Route path = '/createbox' render={() => <CreateOwnBox />}/>
-            </div>
-        </BrowserRouter>
+            <NewBox />
+            <StoreContainer />
+            <Navbar />
+       </div>
     )
 }
 

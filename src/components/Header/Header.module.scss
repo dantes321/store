@@ -1,191 +1,97 @@
 
-.headerInner {
 
-  &.active {
-    width: 100%;
-    height: 100%;
-    background: #0f6674;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    overflow: hidden;
-
-  }
-
-  max-width: 1300px;
-  margin: 0 auto;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 2;
-  overflow: hidden;
-
-  .toggle {
-    width: 60px;
-    height: 60px;
-    background: rgba(145, 145, 145, 0.5);
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.header{
+  width: 100%;
+  .headerContainer{
+    width: 1500px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    border-radius: 50%;
-
-    &:after {
-      content: '';
-      width: 45px;
-      height: 2px;
-      background: white;
-      position: absolute;
-      transform: translateY(6px);
-      transition: .4s;
+    justify-content: space-between;
+    @media (max-width: 1510px) {
+      width: 1200px;
     }
-
-    &:before {
-      content: '';
-      width: 45px;
-      height: 2px;
-      background: white;
-      position: absolute;
-      transform: translateY(-6px);
-      transition: .4s;
+    @media (max-width: 1200px) {
+      width: 800px;
     }
-
-    &.active:after {
-      content: '';
-      width: 45px;
-      height: 2px;
-      background: white;
-      position: absolute;
-      transform: translateY(0) rotate(45deg);
+    @media (max-width: 850px) {
+      width: 667px;
     }
-
-    &.active:before {
-      content: '';
-      width: 45px;
-      height: 2px;
-      background: white;
-      position: absolute;
-      transform: translateY(0) rotate(-45deg);
+    @media (max-width: 667px) {
+      width: auto;
     }
-  }
-
-  .createBox {
-    padding: 10px 16px;
-    background: #e43a45;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 17px;
-    font-weight: 500;
-    border-color: transparent;
-    transition: .4s;
-    flex-shrink: 0;
-
-    &:hover {
-      background: black;
-      color: white;
-    }
-
-
-  }
-
-  .logo {
-    background: url("https://thumb.tildacdn.com/tild6538-3066-4236-b639-383638326563/-/resize/65x/-/format/webp/Full_logo_white_RGB.png") no-repeat;
-    width: 120px;
-    height: 40px;
-    margin: 0 5px;
-    flex-shrink: 0;
-    cursor: pointer;
-  }
-
-  .nav {
-    &.active {
-      display: block;
-      margin: 0;
-
-      ul {
-        text-align: center;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 230px;
-
-        li {
-          display: flex;
-          flex-direction: column;
+    .headerLeft{
+      .headerTitle{
+        margin-left: 20px;
+        font-weight: 700;
+        font-size: 16px;
+      }
+      display: flex;
+      align-items: center;
+      .headerLogo{
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        img{
           width: 100%;
-
-          a {
-            color: white;
-            font-size: 34px;
-          }
+          height: 100%;
+          object-fit: cover;
         }
       }
     }
-
-    ul {
-      margin-top: 10px;
-
-      li {
-        display: inline-flex;
+    .headerRight{
+      display: flex;
+      align-items: center;
+      .numbers{
         margin: 0 20px;
-
-        a {
-          text-decoration: none;
-          text-transform: uppercase;
-          font-size: 17px;
-          font-weight: 700;
-          color: #35303f;
-          transition: .5s;
-          position: relative;
-
-          &.virus:after {
-            content: '';
-            background: url("https://thumb.tildacdn.com/tild6564-3061-4039-b035-326335383239/-/format/webp/Virus.png") 100%/cover no-repeat;
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: -10px;
-            right: -12px;
-
-          }
-
-          &:hover {
-            color: #c8144b;
-          }
+        font-weight: 600;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -55px;
+          background: url("https://png.pngtree.com/png-vector/20191130/ourlarge/pngtree-telephone-vector-icon-in-solid-style-png-image_2055981.jpg") 50%/contain no-repeat;
+          width: 50px;
+          height: 50px;
         }
       }
-    }
-  }
-}
+      .delivery{
+        position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -50px;
+          background: url("http://s1.iconbird.com/ico/2013/12/505/w450h4001385925290Map.png") 50%/contain no-repeat;
+          width: 50px;
+          height: 50px;
 
-@media (max-width: 810px) {
-  .headerInner {
-    .nav {
-      display: none;
+        }
+        div{
+          &:first-child{
+            font-weight: 700;
+          }
+        }
+        margin: 0 20px 0 70px;
+      }
+      a{
+        font-size: 18px;
+        font-weight: 600;
+        background: #54f614;
+        padding: 8px 20px;
+        border-radius: 25px;
+        color: black;
+        margin-left: 20px;
+        text-decoration: none;
+        transition: .5s;
+        &:hover{
+          background: #f0f630;
 
-    }
 
-    .createBox {
-      display: none;
-    }
+        }
+      }
 
-    .toggle {
-      visibility: visible;
     }
   }
 }
