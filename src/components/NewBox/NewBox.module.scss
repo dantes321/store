@@ -17,11 +17,17 @@
       color: black;
       font-weight: 700;
       margin-bottom: 10px;
+      @media (max-width: 764px) {
+        font-size: 35px;
+      }
     }
     .subtitle{
       font-size: 28px;
       font-weight: 600;
       margin-bottom: -20px;
+      @media (max-width: 764px) {
+        font-size: 16px;
+      }
     }
     a{
       padding: 15px 70px;

@@ -9,6 +9,9 @@
   border-top: 1px solid gray;
   z-index: 5;
   background: lightyellow;
+  @media (max-width: 560px) {
+    display: none;
+  }
 
   ul{
     display: inline-flex;
