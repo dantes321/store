@@ -1,0 +1,29 @@
+.OriginalBox{
+  display: flex;
+  position: relative;
+  margin-bottom: -30px;
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,white,green,white);
+  }
+  .originalBoxContainer{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    .box{
+      display: flex;
+      margin-bottom: 120px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+    }
+
+  }
+}

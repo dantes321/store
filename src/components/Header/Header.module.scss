@@ -1,4 +1,9 @@
-
+body{
+  &.active{
+    background: black;
+    pointer-events: none;
+  }
+}
 .header {
   width: 100%;
   .nav {

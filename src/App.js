@@ -8,18 +8,23 @@ import NewBox from "./components/NewBox/NewBox";
 import Navbar from "./components/Navbar/Navbar";
 import Store from "./components/Store/Store";
 import StoreContainer from "./components/Store/StoreContainer";
+import Original from "./components/Original/Original";
+import OriginalBoxContainer from "./components/OriginalBox/OriginalBoxContainer";
 
 const App = (props) => {
 
-    return (
+    return <div>
+        <Header />
        <div className='app-wrapper'>
 
-            <Header />
+
             <NewBox />
             <StoreContainer />
             <Navbar />
+            <Original />
+            <OriginalBoxContainer/>
        </div>
-    )
+    </div>
 }
 
 export default App;

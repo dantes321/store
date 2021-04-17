@@ -4,10 +4,14 @@ import s from './Header.module.scss';
 const Header = () => {
 
     const [active,isActive] = useState(false);
+    let toggleClass = () =>{
+        isActive(!active);
+    }
+
 
 
     return (
-        <div className={s.header}>
+        <div id ='home' className={s.header}>
             <nav className={active? `${s.nav} ${s.active}`: s.nav}>
                 <ul>
                     <li><a href="#">Все боксы</a></li>
@@ -27,7 +31,7 @@ const Header = () => {
                     <div className={s.headerTitle}>СЮРПРИЗ-БОКСЫ №1 В УКРАИНЕ</div>
                 </div>
                 <div className={s.headerRight}>
-                    <span onClick={() => isActive(!active)} className={active? `${s.burger} ${s.active}`: s.burger}> </span>
+                    <span onClick={toggleClass} className={active? `${s.burger} ${s.active}`: s.burger}> </span>
                     <div className={s.numbers}>
                         <div>095-712-331-5</div>
                         <div>096-712-331-5</div>
