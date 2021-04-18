@@ -1,6 +1,7 @@
-.store{
+.store {
   display: flex;
-  .storeContainer{
+
+  .storeContainer {
     width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -8,7 +9,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    .title{
+
+    .title {
       font-size: 36px;
       font-weight: 700;
       color: black;
@@ -17,7 +19,8 @@
         font-size: 26px;
       }
     }
-    .subtitle{
+
+    .subtitle {
       max-width: 800px;
       font-weight: 600;
       font-size: 16px;
@@ -27,7 +30,8 @@
         font-size: 13px;
       }
     }
-    .boxes{
+
+    .boxes {
       display: flex;
       align-items: center;
       justify-content: center;

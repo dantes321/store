@@ -1,23 +1,24 @@
-
-.box{
+.box {
   flex: 1 1 33%;
   margin-bottom: 20px;
 
-
-  img{
+  img {
     width: 200px;
     height: 200px;
   }
-  .title{
+
+  .title {
     font-weight: 700;
     font-size: 18px;
   }
-  .price{
+
+  .price {
     font-weight: 700;
     color: red;
     margin-top: 10px;
   }
-  a{
+
+  a {
     text-decoration: none;
     background: #1e7e34;
     padding: 10px 30px;
@@ -27,7 +28,8 @@
     display: inline-block;
     transition: .3s ease;
     font-weight: 700;
-    &:hover{
+
+    &:hover {
       background: yellow;
 
     }

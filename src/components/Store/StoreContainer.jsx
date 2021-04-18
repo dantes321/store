@@ -1,18 +1,9 @@
-import React from 'react';
-import Store from "./Store";
-import {connect} from "react-redux";
+import { connect } from 'react-redux';
+import Store from './Store';
 
+const mapStateToProps = (state) => ({
+  boxes: state.storePage.boxes,
+});
+const mapDispatchToProps = () => ({});
 
-let mapStateToProps = (state) =>{
-    return{
-        boxes: state.storePage.boxes,
-
-    }
-}
-let mapDispatchToProps = (dispatch) =>{
-    return{
-
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(Store)
+export default connect(mapStateToProps, mapDispatchToProps)(Store);

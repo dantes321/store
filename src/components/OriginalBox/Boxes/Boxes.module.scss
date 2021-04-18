@@ -1,19 +1,23 @@
-.boxes{
-  flex:0 0 25%;
+.boxes {
+  flex: 0 0 25%;
   text-align: center;
-  img{
+
+  img {
     width: 200px;
     height: 200px;
   }
-  .title{
+
+  .title {
     font-size: 16px;
     font-weight: 700;
     margin: 10px 0;
   }
-  .price{
+
+  .price {
     color: red;
   }
-  a{
+
+  a {
     padding: 8px 20px;
     margin-top: 15px;
     border-radius: 10px;
@@ -23,7 +27,8 @@
     color: black;
     transition: .3s ease;
     font-weight: 600;
-    &:hover{
+
+    &:hover {
       background: yellow;
     }
 
