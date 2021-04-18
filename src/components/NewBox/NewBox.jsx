@@ -11,6 +11,7 @@ const NewBox = () => {
     },[])
     return (
         <div className={s.newBox}>
+
             <div className={s.boxContainer}>
                 <div data-aos = 'fade-right' className={s.title}>Нужен четкий Сюрприз-Бокс?</div>
                 <div  data-aos = 'fade-left' className={s.subtitle}>Наш сервис случайных подарков поможет Вам!</div>
