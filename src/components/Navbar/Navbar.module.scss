@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
   width: 100%;
   display: flex;
   align-items: center;
@@ -13,20 +13,22 @@
     display: none;
   }
 
-  ul{
+  ul {
     display: inline-flex;
 
-    li{
+    li {
       margin: 35px 20px 0 20px;
       list-style: none;
       position: relative;
       cursor: pointer;
       transition: .3s ease;
-      &:hover{
+
+      &:hover {
         transform: scale(1.1);
 
       }
-      &:nth-child(1):before{
+
+      &:nth-child(1):before {
         content: '';
         top: -22px;
         left: 20px;
@@ -36,7 +38,8 @@
         background: url("https://static.tildacdn.com/tild6630-3866-4239-b736-333138306164/house.svg");
 
       }
-      &:nth-child(2):before{
+
+      &:nth-child(2):before {
         content: '';
         top: -22px;
         left: 20px;
@@ -46,7 +49,8 @@
         background: url("https://static.tildacdn.com/tild6261-6461-4431-b465-333137326230/video.svg") 50%/cover no-repeat;
 
       }
-      &:nth-child(3):before{
+
+      &:nth-child(3):before {
         content: '';
         top: -22px;
         left: 20px;
@@ -56,7 +60,8 @@
         background: url("https://static.tildacdn.com/tild3666-6136-4230-b437-643233366338/love.svg");
 
       }
-      &:nth-child(4):before{
+
+      &:nth-child(4):before {
         content: '';
         top: -22px;
         left: 20px;
@@ -66,7 +71,8 @@
         background: url("https://static.tildacdn.com/tild3364-6336-4132-a436-343365663136/phone3-call.svg");
 
       }
-      &:nth-child(5):before{
+
+      &:nth-child(5):before {
         content: '';
         top: -22px;
         left: 20px;
@@ -76,7 +82,8 @@
         background: url("https://static.tildacdn.com/tild6338-3464-4466-a238-333938336364/giftbox-with-big-rib.svg");
 
       }
-      a{
+
+      a {
         color: black;
         text-decoration: none;
       }

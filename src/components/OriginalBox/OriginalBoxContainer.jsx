@@ -1,16 +1,9 @@
-import React from 'react';
-import OriginalBox from "./OriginalBox";
-import {connect} from "react-redux";
+import { connect } from 'react-redux';
+import OriginalBox from './OriginalBox';
 
-let mapStateToProps = (state) => {
-    return{
-        boxes: state.originalBoxPage.boxes
-    }
-}
-let mapDispatchToProps = (dispatch) => {
-    return{
+const mapStateToProps = (state) => ({
+  boxes: state.originalBoxPage.boxes,
+});
+const mapDispatchToProps = () => ({});
 
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(OriginalBox);
+export default connect(mapStateToProps, mapDispatchToProps)(OriginalBox);
