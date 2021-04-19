@@ -1,3 +1,8 @@
+import React, { createContext, useReducer } from 'react';
+import storeReducer from './store-reducer';
+
+export const StoreContext = createContext();
+
 const initialState = {
   boxes: [
     {
@@ -39,11 +44,8 @@ const initialState = {
   ],
 };
 
-const storeReducer = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+export const StoreProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(storeReducer, initialState);
 
-export default storeReducer;
+  return <StoreContext.Provider value={{ state, dispatch }}>{children}</StoreContext.Provider>;
+};

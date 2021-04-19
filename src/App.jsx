@@ -5,19 +5,27 @@ import 'aos/dist/aos.css';
 import Header from './components/Header/Header';
 import NewBox from './components/NewBox/NewBox';
 import Navbar from './components/Navbar/Navbar';
-import StoreContainer from './components/Store/StoreContainer';
 import Original from './components/Original/Original';
-import OriginalBoxContainer from './components/OriginalBox/OriginalBoxContainer';
+import Store from './components/Store/Store';
+import OriginalBox from './components/OriginalBox/OriginalBox';
+import { StoreProvider } from './context/store-context';
+import { OriginalBoxProvider } from './context/originalBox-context';
+import ModalWindow from './components/ModalWindow/ModalWindow';
 
 const App = () => (
   <div>
     <Header />
     <div className='app-wrapper'>
       <NewBox />
-      <StoreContainer />
+      <StoreProvider>
+        <Store />
+      </StoreProvider>
       <Navbar />
       <Original />
-      <OriginalBoxContainer />
+      <OriginalBoxProvider>
+        <OriginalBox />
+        <ModalWindow />
+      </OriginalBoxProvider>
     </div>
   </div>
 );
