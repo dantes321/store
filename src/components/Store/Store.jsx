@@ -3,7 +3,7 @@ import Boxes from './Boxes/Boxes';
 
 import s from './Store.module.scss';
 
-const Store = ({ boxes }) => (
+const Store = () => (
   <div id='store' className={s.store}>
     <div className={s.storeContainer}>
       <div className={s.title}>Тематические Сюрприз-Боксы</div>
@@ -12,7 +12,7 @@ const Store = ({ boxes }) => (
         предметы будут точно соответствовать тематике выбранного бокса.
       </div>
       <div className={s.boxes}>
-        <Boxes boxes={boxes} />
+        <Boxes />
       </div>
     </div>
   </div>

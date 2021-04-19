@@ -1,3 +1,8 @@
+import React, { createContext, useReducer, useState } from 'react';
+import originalBoxReducer from './originalBox-reducer';
+
+export const OriginalBoxContext = createContext();
+
 const initialState = {
   boxes: [
     {
@@ -30,11 +35,14 @@ const initialState = {
     },
   ],
 };
-const originalBoxReducer = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
 
-export default originalBoxReducer;
+export const OriginalBoxProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(originalBoxReducer, initialState);
+  const [active, isActive] = useState(false);
+
+  return (
+    <OriginalBoxContext.Provider value={{ state, dispatch, active, isActive }}>
+      {children}
+    </OriginalBoxContext.Provider>
+  );
+};
