@@ -7,9 +7,13 @@
     "prettier"
   ],
   "rules": {
+
     "react/prop-types": "off",
     "prettier/prettier": [
-      "error"
+      "error",{
+        "endOfLine":"auto"
+      }
+
     ]
   },
   "env": {
@@ -17,3 +21,4 @@
     "node": true
   }
 }
+
