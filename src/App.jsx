@@ -10,7 +10,7 @@ import Store from './components/Store/Store';
 import OriginalBox from './components/OriginalBox/OriginalBox';
 import { StoreProvider } from './context/store-context';
 import { OriginalBoxProvider } from './context/originalBox-context';
-import ModalWindow from './components/ModalWindow/ModalWindow';
+
 
 const App = () => (
   <div>
@@ -24,7 +24,7 @@ const App = () => (
       <Original />
       <OriginalBoxProvider>
         <OriginalBox />
-        <ModalWindow />
+        
       </OriginalBoxProvider>
     </div>
   </div>
